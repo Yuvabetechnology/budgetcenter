@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include budgetcenter *.css
+recursive-include budgetcenter *.csv
+recursive-include budgetcenter *.html
+recursive-include budgetcenter *.ico
+recursive-include budgetcenter *.js
+recursive-include budgetcenter *.json
+recursive-include budgetcenter *.md
+recursive-include budgetcenter *.png
+recursive-include budgetcenter *.py
+recursive-include budgetcenter *.svg
+recursive-include budgetcenter *.txt
+recursive-exclude budgetcenter *.pyc
