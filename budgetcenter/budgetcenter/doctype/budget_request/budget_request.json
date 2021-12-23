@@ -6,11 +6,99 @@
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
- "field_order": [],
- "fields": [],
+ "field_order": [
+  "applicant",
+  "applicant_user",
+  "created_on",
+  "budget_type",
+  "budget_period",
+  "income_and_revenue",
+  "total_income",
+  "auroville_maintenance",
+  "total_maintenance",
+  "salary_and_wages",
+  "total_salary",
+  "expenses_and_required_budget",
+  "non_recurring"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicant",
+   "fieldtype": "Link",
+   "label": "Applicant",
+   "options": "Budget Applicant"
+  },
+  {
+   "fieldname": "applicant_user",
+   "fieldtype": "Link",
+   "label": "Applicant User",
+   "options": "User"
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On "
+  },
+  {
+   "fieldname": "budget_type",
+   "fieldtype": "Select",
+   "label": "Budget Type",
+   "options": "Annual\nShort Term\nSpecial\nOthers"
+  },
+  {
+   "fieldname": "budget_period",
+   "fieldtype": "Select",
+   "label": "Budget Period",
+   "options": "\n2022-2023"
+  },
+  {
+   "fieldname": "income_and_revenue",
+   "fieldtype": "Table",
+   "label": "Income And Revenue",
+   "options": "Service Income And Revenue Item Table"
+  },
+  {
+   "fieldname": "total_income",
+   "fieldtype": "Data",
+   "label": "Total Income"
+  },
+  {
+   "fieldname": "auroville_maintenance",
+   "fieldtype": "Table",
+   "label": "Auroville Maintenance",
+   "options": "Auroville Maintenance Item Table"
+  },
+  {
+   "fieldname": "total_maintenance",
+   "fieldtype": "Data",
+   "label": "Total Maintenance"
+  },
+  {
+   "fieldname": "salary_and_wages",
+   "fieldtype": "Table",
+   "label": "Salary And Wages",
+   "options": "Salary And Wages Item Table"
+  },
+  {
+   "fieldname": "total_salary",
+   "fieldtype": "Data",
+   "label": "Total Salary"
+  },
+  {
+   "fieldname": "expenses_and_required_budget",
+   "fieldtype": "Table",
+   "label": "Expenses And Required Budget",
+   "options": "Expenditure And Request Item Table"
+  },
+  {
+   "fieldname": "non_recurring",
+   "fieldtype": "Data",
+   "label": "Non Recurring "
+  }
+ ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-22 14:50:56.261311",
+ "modified": "2021-12-23 10:06:53.046427",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Request",

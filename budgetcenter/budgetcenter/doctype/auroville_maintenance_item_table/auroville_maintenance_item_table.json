@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-23 09:08:16.598772",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "person_name",
+  "auroville_status",
+  "job_role",
+  "engagement_type",
+  "maintenance_type",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "person_name",
+   "fieldtype": "Link",
+   "label": "Person Name",
+   "options": "Maintenance Master List"
+  },
+  {
+   "fieldname": "auroville_status",
+   "fieldtype": "Select",
+   "label": "Auroville Status",
+   "options": "AV\nNC"
+  },
+  {
+   "fieldname": "job_role",
+   "fieldtype": "Data",
+   "label": "Job Role"
+  },
+  {
+   "fieldname": "engagement_type",
+   "fieldtype": "Select",
+   "label": "Engagement Type",
+   "options": "FULL TIME\nHALF TIME\nPART TIME"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Full Maintenance\nHalf Maintenance\nNo Maintenance"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-23 09:58:33.426170",
+ "modified_by": "Administrator",
+ "module": "Budgetcenter",
+ "name": "Auroville Maintenance Item Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
