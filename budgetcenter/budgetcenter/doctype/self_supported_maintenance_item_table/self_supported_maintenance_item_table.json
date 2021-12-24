@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2021-12-23 09:08:16.598772",
+ "creation": "2021-12-23 10:46:28.279966",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "person_name",
+  "suported_by",
   "auroville_status",
   "job_role",
   "engagement_type",
@@ -22,11 +23,18 @@
    "options": "Maintenance Master List"
   },
   {
+   "fieldname": "suported_by",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Suported By",
+   "options": "Self\nService"
+  },
+  {
    "fieldname": "auroville_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Auroville Status",
-   "options": "AV\nNC"
+   "options": "AV\nNC\nVO"
   },
   {
    "fieldname": "job_role",
@@ -58,10 +66,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-12-23 10:38:17.787359",
+ "modified": "2021-12-23 10:51:20.177008",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
- "name": "Auroville Maintenance Item Table",
+ "name": "Self Supported Maintenance Item Table",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
