@@ -23,8 +23,11 @@
   "auroville_maintenance",
   "self_supported_maintenace",
   "salary_and_wages",
+  "genaral_and_administrative_recurring_expenses_section",
   "expenses_and_required_budget",
-  "non_recurring",
+  "school_specific_recurring_expenses_section",
+  "school_specific_recurring",
+  "specifi_student_information_section",
   "childrens_and_students"
  ],
  "fields": [
@@ -82,11 +85,6 @@
    "options": "Expenditure And Request Item Table"
   },
   {
-   "fieldname": "non_recurring",
-   "fieldtype": "Data",
-   "label": "Non Recurring "
-  },
-  {
    "fieldname": "self_supported_maintenace",
    "fieldtype": "Table",
    "label": "Self Supported Maintenace ",
@@ -109,6 +107,8 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
+   "collapsible": 1,
    "fieldname": "section_break_9",
    "fieldtype": "Section Break",
    "label": "Annual Income And Source"
@@ -134,14 +134,43 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "collapsible": 1,
    "fieldname": "human_resources_section",
    "fieldtype": "Section Break",
    "label": "Human Resources"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "school_specific_recurring_expenses_section",
+   "fieldtype": "Section Break",
+   "label": " School Specific Recurring Expenses"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "genaral_and_administrative_recurring_expenses_section",
+   "fieldtype": "Section Break",
+   "label": "General And Administrative Recurring Expenses Only"
+  },
+  {
+   "fieldname": "school_specific_recurring",
+   "fieldtype": "Table",
+   "label": "School Specific Recurring ",
+   "options": "School Specific Recurring Expenses Item Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "specifi_student_information_section",
+   "fieldtype": "Section Break",
+   "label": "Specifi Student Information"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-23 14:10:08.784822",
+ "modified": "2021-12-27 15:04:52.389297",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Request",

@@ -1,22 +1,161 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:service_name",
  "creation": "2021-12-23 09:08:50.403697",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "data_1"
+  "basic_information_section",
+  "service_name",
+  "serice_status",
+  "service_establishment",
+  "service_description",
+  "service_location",
+  "column_break_4",
+  "sector_category",
+  "primary_service",
+  "activity",
+  "office_email",
+  "office_phone_number",
+  "account_number",
+  "basic_information",
+  "human_resources_section",
+  "employee_information_section",
+  "executives",
+  "employees",
+  "disbursement_details",
+  "budget_transaction",
+  "narrative_report_section",
+  "narrative_report"
  ],
  "fields": [
   {
-   "fieldname": "data_1",
-   "fieldtype": "Data"
+   "fieldname": "sector_category",
+   "fieldtype": "Link",
+   "label": "Sector",
+   "options": "Service Sectors"
+  },
+  {
+   "default": "0",
+   "fieldname": "primary_service",
+   "fieldtype": "Check",
+   "label": "Primary Service"
+  },
+  {
+   "default": "0",
+   "fieldname": "activity",
+   "fieldtype": "Check",
+   "label": "Activity"
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Small Text",
+   "label": "Service Description"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Int",
+   "label": "Account Number"
+  },
+  {
+   "fieldname": "budget_transaction",
+   "fieldtype": "Table",
+   "label": "Budget Transaction",
+   "options": "Budget Disbursement Item Table"
+  },
+  {
+   "fieldname": "human_resources_section",
+   "fieldtype": "Section Break",
+   "label": "Human Resources"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Table",
+   "label": "Employees",
+   "options": "Service Employee Item Table"
+  },
+  {
+   "fieldname": "service_location",
+   "fieldtype": "Geolocation",
+   "label": "Service Location"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "disbursement_details",
+   "fieldtype": "Section Break",
+   "label": "Disbursement Details"
+  },
+  {
+   "fieldname": "office_email",
+   "fieldtype": "Data",
+   "label": "Office Email"
+  },
+  {
+   "fieldname": "office_phone_number",
+   "fieldtype": "Data",
+   "label": "Office Phone Number"
+  },
+  {
+   "fieldname": "narrative_report",
+   "fieldtype": "Table",
+   "label": "Narrative Report",
+   "options": "Budget Narrative Report Item Table"
+  },
+  {
+   "fieldname": "basic_information",
+   "fieldtype": "Small Text",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "executives",
+   "fieldtype": "Table",
+   "label": "Executives",
+   "options": "Service Exective Item Tables"
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "label": "Service Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "employee_information_section",
+   "fieldtype": "Section Break",
+   "label": "Employees And Executives Information "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "narrative_report_section",
+   "fieldtype": "Section Break",
+   "label": "Narrative Report"
+  },
+  {
+   "fieldname": "service_establishment",
+   "fieldtype": "Date",
+   "label": "Service Establishment"
+  },
+  {
+   "fieldname": "serice_status",
+   "fieldtype": "Select",
+   "label": "Serice Status",
+   "options": "Current\nTerminated"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-23 09:08:50.403697",
+ "modified": "2021-12-27 14:52:33.980503",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Applicant",
@@ -35,6 +174,7 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC"
 }
