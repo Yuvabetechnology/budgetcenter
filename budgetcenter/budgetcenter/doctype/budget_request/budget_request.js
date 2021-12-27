@@ -7,7 +7,10 @@ frappe.ui.form.on('Budget Request', {
 			//perform desired action such as routing to new form or fetching etc.
 		  }, __("Utilities"));
 		  
-	
+		  frm.add_custom_button(__('Upload Students Data'), function(){
+			//perform desired action such as routing to new form or fetching etc.
+		  }, __("Utilities"));
 
 	}
+	
 });
