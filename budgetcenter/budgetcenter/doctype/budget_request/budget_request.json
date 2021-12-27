@@ -1,25 +1,34 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "Prompt",
  "creation": "2021-12-22 14:50:56.261311",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_break_16",
   "applicant",
   "applicant_user",
   "created_on",
-  "budget_type",
+  "column_break_8",
+  "applicant_information",
+  "column_break_7",
   "budget_period",
+  "budget_type",
+  "section_break_9",
   "income_and_revenue",
-  "total_income",
+  "column_break_12",
+  "service_net_balance",
+  "human_resources_section",
   "auroville_maintenance",
-  "total_maintenance",
+  "self_supported_maintenace",
   "salary_and_wages",
-  "total_salary",
+  "genaral_and_administrative_recurring_expenses_section",
   "expenses_and_required_budget",
-  "non_recurring"
+  "school_specific_recurring_expenses_section",
+  "school_specific_recurring",
+  "specifi_student_information_section",
+  "childrens_and_students"
  ],
  "fields": [
   {
@@ -58,20 +67,10 @@
    "options": "Service Income And Revenue Item Table"
   },
   {
-   "fieldname": "total_income",
-   "fieldtype": "Data",
-   "label": "Total Income"
-  },
-  {
    "fieldname": "auroville_maintenance",
    "fieldtype": "Table",
    "label": "Auroville Maintenance",
    "options": "Auroville Maintenance Item Table"
-  },
-  {
-   "fieldname": "total_maintenance",
-   "fieldtype": "Data",
-   "label": "Total Maintenance"
   },
   {
    "fieldname": "salary_and_wages",
@@ -80,25 +79,98 @@
    "options": "Salary And Wages Item Table"
   },
   {
-   "fieldname": "total_salary",
-   "fieldtype": "Data",
-   "label": "Total Salary"
-  },
-  {
    "fieldname": "expenses_and_required_budget",
    "fieldtype": "Table",
    "label": "Expenses And Required Budget",
    "options": "Expenditure And Request Item Table"
   },
   {
-   "fieldname": "non_recurring",
-   "fieldtype": "Data",
-   "label": "Non Recurring "
+   "fieldname": "self_supported_maintenace",
+   "fieldtype": "Table",
+   "label": "Self Supported Maintenace ",
+   "options": "Self Supported Maintenance Item Table"
+  },
+  {
+   "fieldname": "childrens_and_students",
+   "fieldtype": "Table",
+   "label": "Childrens And Students",
+   "options": "School Children And Students List"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Applicant Information",
+   "options": "fa fa-pushpin"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Annual Income And Source"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "applicant_information",
+   "fieldtype": "HTML",
+   "label": "Applicant Information",
+   "options": "\n<h4>This is heading 4</h4>  <address>\n    You can contact author at <a href=\"http://www.somedomain.com/contact\">\n    www.somedomain.com</a>.<br>\n    If you see any bugs, please <a href=\"mailto:webmaster@somedomain.com\">\n    contact webmaster</a>.<br>\n    You may also want to visit us:<br>\n    Mozilla Foundation<br>\n    331 E Evelyn Ave<br>\n    Mountain View, CA 94041<br>\n    USA\n  </address>\n"
+  },
+  {
+   "fieldname": "service_net_balance",
+   "fieldtype": "Table",
+   "label": "Service Net Balance",
+   "options": "Service Net Balance In All Accounts Table"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "human_resources_section",
+   "fieldtype": "Section Break",
+   "label": "Human Resources"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "school_specific_recurring_expenses_section",
+   "fieldtype": "Section Break",
+   "label": " School Specific Recurring Expenses"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "genaral_and_administrative_recurring_expenses_section",
+   "fieldtype": "Section Break",
+   "label": "General And Administrative Recurring Expenses Only"
+  },
+  {
+   "fieldname": "school_specific_recurring",
+   "fieldtype": "Table",
+   "label": "School Specific Recurring ",
+   "options": "School Specific Recurring Expenses Item Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "specifi_student_information_section",
+   "fieldtype": "Section Break",
+   "label": "Specifi Student Information"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-23 10:06:53.046427",
+ "modified": "2021-12-27 15:04:52.389297",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Request",

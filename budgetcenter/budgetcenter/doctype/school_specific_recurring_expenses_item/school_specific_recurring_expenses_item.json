@@ -1,29 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:sector_name",
- "creation": "2021-12-23 09:27:23.225585",
+ "autoname": "field:item_name",
+ "creation": "2021-12-27 11:47:05.005802",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "sector_name"
+  "account_code",
+  "item_name"
  ],
  "fields": [
   {
-   "fieldname": "sector_name",
+   "bold": 1,
+   "fieldname": "account_code",
    "fieldtype": "Data",
-   "label": "Sector Name",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Account Code"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-27 10:50:49.869431",
+ "modified": "2021-12-27 11:47:05.005802",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
- "name": "Service Sectors",
- "name_case": "UPPER CASE",
+ "name": "School Specific Recurring Expenses Item",
  "owner": "Administrator",
  "permissions": [
   {
@@ -39,7 +47,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC"
 }

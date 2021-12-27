@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2021-12-23 09:20:11.295944",
+ "creation": "2021-12-27 15:00:48.386421",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -19,7 +19,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Item Name",
-   "options": "Recurring Expenses Item",
+   "options": "School Specific Recurring Expenses Item",
    "reqd": 1
   },
   {
@@ -57,10 +57,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-12-27 14:44:55.549525",
+ "modified": "2021-12-27 15:00:48.386421",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
- "name": "Expenditure And Request Item Table",
+ "name": "School Specific Recurring Expenses Item Table",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
