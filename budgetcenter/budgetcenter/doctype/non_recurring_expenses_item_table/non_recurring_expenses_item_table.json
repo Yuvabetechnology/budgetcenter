@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-27 15:36:46.778344",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "description",
+  "unit",
+  "qty",
+  "total"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "bold": 1,
+   "fieldname": "unit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "Meter\nKg\nPc",
+   "translatable": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Total"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-27 15:40:33.399279",
+ "modified_by": "Administrator",
+ "module": "Budgetcenter",
+ "name": "Non Recurring Expenses Item Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

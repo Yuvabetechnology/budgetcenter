@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:Budeget Request -{applicant}-{budget_type}-{#####}",
  "creation": "2021-12-22 14:50:56.261311",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -8,7 +9,6 @@
  "field_order": [
   "section_break_16",
   "applicant",
-  "applicant_user",
   "created_on",
   "column_break_8",
   "applicant_information",
@@ -25,10 +25,13 @@
   "salary_and_wages",
   "genaral_and_administrative_recurring_expenses_section",
   "expenses_and_required_budget",
+  "non_recurring_expenses_only_section",
+  "non_recurring",
   "school_specific_recurring_expenses_section",
   "school_specific_recurring",
   "specifi_student_information_section",
-  "childrens_and_students"
+  "childrens_and_students",
+  "amended_from"
  ],
  "fields": [
   {
@@ -36,12 +39,6 @@
    "fieldtype": "Link",
    "label": "Applicant",
    "options": "Budget Applicant"
-  },
-  {
-   "fieldname": "applicant_user",
-   "fieldtype": "Link",
-   "label": "Applicant User",
-   "options": "User"
   },
   {
    "fieldname": "created_on",
@@ -166,11 +163,33 @@
    "fieldname": "specifi_student_information_section",
    "fieldtype": "Section Break",
    "label": "Specifi Student Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Budget Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "non_recurring_expenses_only_section",
+   "fieldtype": "Section Break",
+   "label": "Non Recurring Expenses Only"
+  },
+  {
+   "fieldname": "non_recurring",
+   "fieldtype": "Table",
+   "label": "Non Recurring ",
+   "options": "Non Recurring Expenses Item Table"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2021-12-27 15:04:52.389297",
+ "modified": "2021-12-27 15:46:31.170826",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Request",
@@ -185,6 +204,20 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Budget Applicant",
+   "select": 1,
    "share": 1,
    "write": 1
   }
