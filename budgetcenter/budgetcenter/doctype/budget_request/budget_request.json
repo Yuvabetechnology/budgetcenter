@@ -17,8 +17,10 @@
   "budget_type",
   "section_break_9",
   "income_and_revenue",
+  "total_income",
   "column_break_12",
   "service_net_balance",
+  "total_net_balance",
   "human_resources_section",
   "auroville_maintenance",
   "self_supported_maintenace",
@@ -184,12 +186,22 @@
    "fieldtype": "Table",
    "label": "Non Recurring ",
    "options": "Non Recurring Expenses Item Table"
+  },
+  {
+   "fieldname": "total_income",
+   "fieldtype": "Currency",
+   "label": "Total Income"
+  },
+  {
+   "fieldname": "total_net_balance",
+   "fieldtype": "Currency",
+   "label": "Total Net Balance"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-12-27 15:46:31.170826",
+ "modified": "2021-12-28 10:12:05.020684",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Request",
