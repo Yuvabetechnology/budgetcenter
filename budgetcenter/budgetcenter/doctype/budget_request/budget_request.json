@@ -7,6 +7,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "select_sector_section",
+  "select_sector",
   "section_break_16",
   "applicant",
   "created_on",
@@ -117,10 +119,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "applicant",
    "fieldname": "applicant_information",
    "fieldtype": "HTML",
    "label": "Applicant Information",
-   "options": "\n<h4>This is heading 4</h4>  <address>\n    You can contact author at <a href=\"http://www.somedomain.com/contact\">\n    www.somedomain.com</a>.<br>\n    If you see any bugs, please <a href=\"mailto:webmaster@somedomain.com\">\n    contact webmaster</a>.<br>\n    You may also want to visit us:<br>\n    Mozilla Foundation<br>\n    331 E Evelyn Ave<br>\n    Mountain View, CA 94041<br>\n    USA\n  </address>\n"
+   "options": "\n\n<div id=\"app_div\">\n <ul class=\"list-unstyled mb0\">\n<li><h4 id=\"applicant_name\"></h4></li>\n <li><strong>Sector:</strong>&nbsp;<strong class=\"font-weight-normal\" id=\"applicant_sector\"></strong> </li>\n <li><strong>Email:</strong>&nbsp;<strong class=\"font-weight-normal\" id=\"applicant_email\"></strong> </li>\n <li><strong>Phone:</strong>&nbsp;<strong class=\"font-weight-normal\" id=\"applicant_phone\"></strong> </li>\n    </ul>\n</div>\n"
   },
   {
    "fieldname": "service_net_balance",
@@ -143,6 +146,7 @@
   {
    "bold": 1,
    "collapsible": 1,
+   "depends_on": "eval:doc.select_sector == `Education`;",
    "fieldname": "school_specific_recurring_expenses_section",
    "fieldtype": "Section Break",
    "label": " School Specific Recurring Expenses"
@@ -162,6 +166,7 @@
   },
   {
    "collapsible": 1,
+   "depends_on": "eval:doc.select_sector == `Education`;",
    "fieldname": "specifi_student_information_section",
    "fieldtype": "Section Break",
    "label": "Specifi Student Information"
@@ -196,12 +201,23 @@
    "fieldname": "total_net_balance",
    "fieldtype": "Currency",
    "label": "Total Net Balance"
+  },
+  {
+   "fieldname": "select_sector",
+   "fieldtype": "Link",
+   "label": "Select Sector",
+   "options": "Service Sectors"
+  },
+  {
+   "fieldname": "select_sector_section",
+   "fieldtype": "Section Break",
+   "label": "Select Sector"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-12-28 10:12:05.020684",
+ "modified": "2022-01-04 10:34:15.402370",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Request",

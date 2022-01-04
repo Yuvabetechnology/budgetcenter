@@ -34,6 +34,7 @@
   {
    "fieldname": "sector_category",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Sector",
    "options": "Service Sectors"
   },
@@ -90,11 +91,13 @@
   {
    "fieldname": "office_email",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Office Email"
   },
   {
    "fieldname": "office_phone_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Office Phone Number"
   },
   {
@@ -149,13 +152,14 @@
   {
    "fieldname": "serice_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Serice Status",
    "options": "Current\nTerminated"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-27 14:52:33.980503",
+ "modified": "2022-01-03 10:06:45.815564",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Applicant",

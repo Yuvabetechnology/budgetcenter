@@ -24,30 +24,83 @@ frappe.ui.form.on('Budget Request', {
 			})
 			frm.set_value('total_income', total)
 
-		}
-		frm.calculate_total_net_balance = function(frm,row){
-			let total=0;
+		},
+	    frm.calculate_service_net_balance = function (frm, row) {
+			let total = 0;
+			frm.doc.service_net_balance.forEach(d => {
+				
+				total = total + d.amount 
+				console.log(total);
 
-			frm.doc.service_net_balance.forEach(d=>{
-				total+=d.amount;
 			})
+			frm.set_value('total_net_balance', total)
 
+		},
+
+		frm.getapplicantinfo = function (frm, applicant) {
+			if(!applicant){
+
+				console.log("no applicant create new ")
+
+			}else{
+				frappe.call({
+					method: "budgetcenter.budgetcenter.doctype.budget_request.budget_request.get_applicant",
+					args: {
+						applicant: applicant,
+					},//dotted path to server method
+					callback: function (r) {
+						console.log(r)
+
+						$('#applicant_name').html(r.message.service_name);
+						$('#applicant_sector').html(r.message.sector_category);
+						$('#applicant_email').html(r.message.office_email);
+						$('#applicant_phone').html(r.message.office_phone_number);
+						//$('#cus_info3').html(r.message.community);
+						//$('#cus_info4').html(r.message.info);
+						//$('#cus_info5').html(r.message.customer_type);
+						// code snippet
+					
+						
+					}
+				})
+
+			}
+
+		},
+		frm.getmaintenanceinfo = function(frm,row,cdt,cdn){
+
+			console.log(row.person_name)
+
+			frappe.call({
+			 	method: "budgetcenter.budgetcenter.doctype.budget_request.budget_request.get_maintanence_list",
+			 	args: {
+			 		data:row.person_name,
+			 	},//dotted path to server method
+			 	callback: function (r) {
+					console.log(r)
+					console.log(r.message.av_status)
+					frappe.model.set_value(cdt,cdn,'auroville_status',r.message.av_status)
+				
+				}
+				
+				
+			 })
 			
-			frm.set_value('total_net_balance',total)
+			// frappe.call({
+
+			// 	method:"budgetcenter.budgetcenter.doctype.budget_request.budget_request.get_maintanence_list",
+			// 	args:{"data":"Mariya"},
+			// 	callback: function(r){
+			// 		console.log(r)
+
+			// 	}
+			// })
 		}
 
-		frm.calculate_spent=function(frm,row){
-
-
-		}
-		frm.calculate_required=function(frm,row){
-
-		}
-	
-	
 	}
-    
-
+	
+   
+	//add new function
 
 	
 });
@@ -55,6 +108,7 @@ frappe.ui.form.on('Budget Request', {
 frappe.ui.form.on('Service Income And Revenue Item Table', {
 	source_name: function (frm, cdt, cdn) {
 		let row = locals[cdt, cdn];
+		
 
 
 	},
@@ -71,40 +125,41 @@ frappe.ui.form.on('Service Income And Revenue Item Table', {
         
     }
 
+});
 
+frappe.ui.form.on('Service Net Balance In All Accounts Table', {
+	
+	amount: function (frm, cdt, cdn) {
+		let row = locals[cdt, cdn];
+		frm.calculate_service_net_balance(frm, row);
+		
 
+	},
+	service_net_balance_remove: function(frm,cdt,cdn){
+		let row=locals[cdt,cdn]
+		frm.calculate_service_net_balance(frm,row);
+	}
 
 });
 
 
-frappe.ui.form.on('Service Net Balance In All Accounts Table',{
+frappe.ui.form.on('Budget Request', 'applicant', function (frm, cdt, cdn) {
+	
+	frm.getapplicantinfo(frm, cur_frm.doc.applicant)
+	
 
-	amount: function(frm,cdt,cdn){
-		let row=locals[cdt][cdn]
-		frm.calculate_total_net_balance(frm,row);
-	}
+	
 });
 
-frappe.ui.form.on('Expenditure And Request Item Table', {
-	item_name: function (frm, cdt, cdn) {
-		let row = locals[cdt][cdn];
-		console.log(row)
-	},
-	amount_spent: function (frm, cdt, cdn) {
-		let row = locals[cdt][cdn];
-		frm.calculate_spent(frm, row);
+frappe.ui.form.on('Auroville Maintenance Item Table',{
 
-
-
-	},
-	amount_required: function (frm, cdt, cdn) {
-
-		let row = locals[cdt][cdn];
-
-		frm.calculate_required(frm, row);
-
+	person_name : function(frm,cdt,cdn){
+	//console.log("hello")
+	let row=locals[cdt][cdn]
+	console.log(row)
+	
+	frm.getmaintenanceinfo(frm,row,cdt,cdn)
 	}
-
 
 
 });
