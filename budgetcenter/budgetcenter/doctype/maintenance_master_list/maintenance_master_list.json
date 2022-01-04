@@ -1,22 +1,57 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2021-12-23 09:20:38.746490",
+ "autoname": "field:first_name",
+ "creation": "2022-01-04 11:53:47.102949",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "data_1"
+  "first_name",
+  "last_name",
+  "ml_no",
+  "community",
+  "av_status",
+  "fs_account_no"
  ],
  "fields": [
   {
-   "fieldname": "data_1",
-   "fieldtype": "Data"
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "ml_no",
+   "fieldtype": "Data",
+   "label": "ML No"
+  },
+  {
+   "fieldname": "community",
+   "fieldtype": "Link",
+   "label": "Community",
+   "options": "Communities"
+  },
+  {
+   "fieldname": "av_status",
+   "fieldtype": "Select",
+   "label": "AV status",
+   "options": "\nAV\nNC"
+  },
+  {
+   "fieldname": "fs_account_no",
+   "fieldtype": "Data",
+   "label": "FS Account No"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-23 09:20:38.746490",
+ "modified": "2022-01-04 11:53:47.102949",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Maintenance Master List",
@@ -36,5 +71,6 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "track_changes": 1
 }
