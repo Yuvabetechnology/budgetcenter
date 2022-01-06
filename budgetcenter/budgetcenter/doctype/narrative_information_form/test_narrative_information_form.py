@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestServiceIncomeSourceItem(unittest.TestCase):
+class TestNarrativeInformationForm(unittest.TestCase):
 	pass

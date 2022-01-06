@@ -4,5 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class ServiceIncomeSourceItem(Document):
+class NarrativeInformationForm(Document):
 	pass
