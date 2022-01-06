@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:item_name",
- "creation": "2021-12-23 09:26:53.825662",
+ "creation": "2022-01-04 12:19:53.007082",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -12,30 +12,23 @@
  ],
  "fields": [
   {
-   "bold": 1,
    "fieldname": "account_code",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_preview": 1,
    "label": "Account Code"
   },
   {
-   "bold": 1,
    "fieldname": "item_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_preview": 1,
    "label": "Item Name",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-27 11:02:47.282951",
+ "modified": "2022-01-04 12:19:53.007082",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Service Income Source Item",
- "name_case": "UPPER CASE",
  "owner": "Administrator",
  "permissions": [
   {
@@ -51,7 +44,7 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "track_changes": 1
 }

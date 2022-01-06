@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "NIF.####",
+ "creation": "2022-01-06 09:50:20.788889",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "city_services_narrative_information_form",
+  "html_2",
+  "service_name",
+  "service_website",
+  "contact_persons_section",
+  "contact_persons_table",
+  "purpose_section",
+  "brief_overview",
+  "difference_between",
+  "beneficiaries",
+  "target_beneficiaries",
+  "no_of_beneficiaries",
+  "charge_users_for_service",
+  "main_activities_section",
+  "main_activities",
+  "goals_and_objectives_for_the_coming_year_section",
+  "goals_and_objectives",
+  "challenges",
+  "human_resources_section",
+  "human",
+  "budget_related_explanations_section",
+  "new_budget_explanations"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "purpose_section",
+   "fieldtype": "Section Break",
+   "label": "PURPOSE "
+  },
+  {
+   "fieldname": "brief_overview",
+   "fieldtype": "Small Text",
+   "label": "Give a brief overview of what kind of service you intend provide to the community:"
+  },
+  {
+   "fieldname": "difference_between",
+   "fieldtype": "Small Text",
+   "label": "Why do you feel this service is needed? If applicable, please explain what is the difference between your proposed service and similar exist"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "beneficiaries",
+   "fieldtype": "Section Break",
+   "label": "BENEFICIARIES "
+  },
+  {
+   "fieldname": "target_beneficiaries",
+   "fieldtype": "Small Text",
+   "label": "Who are your target groups/intended beneficiaries?"
+  },
+  {
+   "fieldname": "no_of_beneficiaries",
+   "fieldtype": "Small Text",
+   "label": "How many members of the community do you expect to use and benefit from the services you will provide (per year)?"
+  },
+  {
+   "fieldname": "charge_users_for_service",
+   "fieldtype": "Small Text",
+   "label": "Do you intend to charge users for the service, if so, please explain the reason/need for this ? "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "main_activities_section",
+   "fieldtype": "Section Break",
+   "label": "MAIN ACTIVITIES"
+  },
+  {
+   "fieldname": "main_activities",
+   "fieldtype": "Small Text",
+   "label": "Give a brief overview of your main intended activities (and if applicable, how these are different from similar ones provided by other servi"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "goals_and_objectives_for_the_coming_year_section",
+   "fieldtype": "Section Break",
+   "label": "GOALS AND OBJECTIVES FOR THE COMING YEAR"
+  },
+  {
+   "fieldname": "goals_and_objectives",
+   "fieldtype": "Small Text",
+   "label": "What are your goals and objectives for the coming year?  "
+  },
+  {
+   "fieldname": "challenges",
+   "fieldtype": "Small Text",
+   "label": "What are the challenges you foresee?"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "human_resources_section",
+   "fieldtype": "Section Break",
+   "label": "HUMAN RESOURCES "
+  },
+  {
+   "fieldname": "human",
+   "fieldtype": "Table",
+   "label": "How many people (Aurovilians, Employees, Volunteers) do you expect to serve in your service in the coming year ?",
+   "options": "SHR Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "budget_related_explanations_section",
+   "fieldtype": "Section Break",
+   "label": "BUDGET RELATED EXPLANATIONS "
+  },
+  {
+   "fieldname": "new_budget_explanations",
+   "fieldtype": "Long Text",
+   "label": "This is a space for to share anything important with reference to your budget request for this coming year (2022-2023)."
+  },
+  {
+   "bold": 1,
+   "fieldname": "contact_persons_table",
+   "fieldtype": "Table",
+   "label": "Contact Persons",
+   "options": "Service Contact Persons"
+  },
+  {
+   "fieldname": "service_website",
+   "fieldtype": "Data",
+   "label": "Website (if any): "
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "label": "Name of the Service:\u00a0"
+  },
+  {
+   "fieldname": "city_services_narrative_information_form",
+   "fieldtype": "HTML",
+   "label": "City Services Narrative Information Form ",
+   "options": "<h2 align=\"center\">City Services Narrative Information Form </h2>"
+  },
+  {
+   "fieldname": "html_2",
+   "fieldtype": "HTML",
+   "options": "<h3 align=\"center\">If you are a new service, please complete this narrative information form to accompany your City Services Budget Request Form (2022-2023)</h3><h3></h3>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_persons_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Persons"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-06 12:09:07.462324",
+ "modified_by": "Administrator",
+ "module": "Budgetcenter",
+ "name": "Narrative Information Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

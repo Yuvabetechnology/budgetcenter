@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-06 10:18:07.470900",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "responsibilities",
+  "working_hours",
+  "av_status",
+  "supported_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "role",
+   "fieldtype": "Data",
+   "label": "Role"
+  },
+  {
+   "fieldname": "responsibilities",
+   "fieldtype": "Data",
+   "label": "Responsibilities"
+  },
+  {
+   "fieldname": "working_hours",
+   "fieldtype": "Data",
+   "label": "Working Hours (per week)"
+  },
+  {
+   "fieldname": "av_status",
+   "fieldtype": "Select",
+   "label": "Status (AV/Employee)",
+   "options": "\nAV\nNC"
+  },
+  {
+   "fieldname": "supported_by",
+   "fieldtype": "Select",
+   "label": "Supported by ",
+   "options": "\nCS\nOther Service Income\nVolunteering"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-06 10:31:06.551035",
+ "modified_by": "Administrator",
+ "module": "Budgetcenter",
+ "name": "SHR Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

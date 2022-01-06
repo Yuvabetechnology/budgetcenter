@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-06 12:14:34.233523",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "city_services_narrative_information_form",
+  "html_2",
+  "service_name",
+  "service_existence",
+  "service_website",
+  "contact_persons_section",
+  "contact_persons_table",
+  "purpose_section",
+  "brief_overview",
+  "difference_between",
+  "beneficiaries",
+  "target_beneficiaries",
+  "no_of_beneficiaries",
+  "coming_year_beneficiaries",
+  "charge_users_for_service",
+  "main_activities_section",
+  "html_17",
+  "main_activities",
+  "html_19",
+  "diff_between_similiar_services",
+  "column_break_32",
+  "html_21",
+  "service_impact",
+  "html_23",
+  "past_year_changes_in_service",
+  "goals_and_objectives_for_the_coming_year_section",
+  "goals_and_objectives",
+  "challenges",
+  "human_resources_section",
+  "human",
+  "budget_related_explanations_section",
+  "new_budget_explanations"
+ ],
+ "fields": [
+  {
+   "fieldname": "city_services_narrative_information_form",
+   "fieldtype": "HTML",
+   "label": "City Services Narrative Report Form",
+   "options": "<h2 align=\"center\">City Services Narrative Report Form</h2>"
+  },
+  {
+   "fieldname": "html_2",
+   "fieldtype": "HTML",
+   "options": "<h3 align=\"center\">Please give a written outline of the activities of your service during the past 12 months, to accompany your City Services Budget Request Form</h3>"
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "label": "Name of the Service:\u00a0"
+  },
+  {
+   "fieldname": "service_existence",
+   "fieldtype": "Data",
+   "label": "How long the service has been in existence:"
+  },
+  {
+   "fieldname": "service_website",
+   "fieldtype": "Data",
+   "label": "Website (if any): "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_persons_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Persons"
+  },
+  {
+   "bold": 1,
+   "fieldname": "contact_persons_table",
+   "fieldtype": "Table",
+   "label": "Contact Persons",
+   "options": "Service Contact Persons"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "purpose_section",
+   "fieldtype": "Section Break",
+   "label": "PURPOSE "
+  },
+  {
+   "fieldname": "brief_overview",
+   "fieldtype": "Small Text",
+   "label": "Give a brief overview of what kind of service you (aspire to) provide to the community:\u00a0"
+  },
+  {
+   "fieldname": "difference_between",
+   "fieldtype": "Small Text",
+   "label": "If applicable, please explain what is the difference between your service and similar ones:"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "beneficiaries",
+   "fieldtype": "Section Break",
+   "label": "BENEFICIARIES "
+  },
+  {
+   "fieldname": "target_beneficiaries",
+   "fieldtype": "Small Text",
+   "label": "Who are your target groups/intended beneficiaries?"
+  },
+  {
+   "fieldname": "no_of_beneficiaries",
+   "fieldtype": "Small Text",
+   "label": "How many members of the community benefited from the services you provided in the past year ?"
+  },
+  {
+   "fieldname": "charge_users_for_service",
+   "fieldtype": "Small Text",
+   "label": "Do you intend to charge users for the service, if so, please explain the reason/need for this ? "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "main_activities_section",
+   "fieldtype": "Section Break",
+   "label": "MAIN ACTIVITIES"
+  },
+  {
+   "fieldname": "main_activities",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "goals_and_objectives_for_the_coming_year_section",
+   "fieldtype": "Section Break",
+   "label": "GOALS AND OBJECTIVES FOR THE COMING YEAR"
+  },
+  {
+   "fieldname": "goals_and_objectives",
+   "fieldtype": "Small Text",
+   "label": "What are your goals and objectives for the coming year?  "
+  },
+  {
+   "fieldname": "challenges",
+   "fieldtype": "Small Text",
+   "label": "What are the challenges you foresee?"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "human_resources_section",
+   "fieldtype": "Section Break",
+   "label": "HUMAN RESOURCES "
+  },
+  {
+   "fieldname": "human",
+   "fieldtype": "Table",
+   "label": "How many people (Aurovilians, Employees, Volunteers) do you expect to serve in your service in the coming year ?",
+   "options": "SHR Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "budget_related_explanations_section",
+   "fieldtype": "Section Break",
+   "label": "BUDGET RELATED EXPLANATIONS "
+  },
+  {
+   "fieldname": "new_budget_explanations",
+   "fieldtype": "Long Text",
+   "label": "This is a space for to share anything important with reference to your budget request for this coming year (2022-2023)."
+  },
+  {
+   "fieldname": "coming_year_beneficiaries",
+   "fieldtype": "Small Text",
+   "label": "How many do you expect to serve in the coming year?"
+  },
+  {
+   "fieldname": "html_17",
+   "fieldtype": "HTML",
+   "options": "<h5>Give a brief overview of your main intended activities</h5>"
+  },
+  {
+   "fieldname": "past_year_changes_in_service",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "html_19",
+   "fieldtype": "HTML",
+   "options": "<h5>if applicable, how these are different to similar activities by other services in the community ?</h5>"
+  },
+  {
+   "fieldname": "diff_between_similiar_services",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "html_21",
+   "fieldtype": "HTML",
+   "options": "<h5>What impact did this have on the functioning of the service, and for the services you were able to provide to the community?</h5>"
+  },
+  {
+   "fieldname": "service_impact",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "html_23",
+   "fieldtype": "HTML",
+   "options": "<h5>What impact did this have on the functioning of the service, and for the services you were able to provide to the community?</h5>"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-06 16:22:39.434366",
+ "modified_by": "Administrator",
+ "module": "Budgetcenter",
+ "name": "Narrative Report Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
