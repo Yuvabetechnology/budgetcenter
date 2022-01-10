@@ -9,8 +9,11 @@
  "field_order": [
   "city_services_narrative_information_form",
   "html_2",
+  "applicant_type",
   "service_name",
+  "application_status",
   "service_website",
+  "organization_email",
   "contact_persons_section",
   "contact_persons_table",
   "purpose_section",
@@ -163,11 +166,29 @@
    "fieldname": "diff_between_services",
    "fieldtype": "Small Text",
    "label": "How these are different from similar ones provided by other services in the community ?"
+  },
+  {
+   "fieldname": "applicant_type",
+   "fieldtype": "Select",
+   "label": "Applicant Type",
+   "options": "\nOrganization\nIndividual"
+  },
+  {
+   "depends_on": "eval:doc.applicant_type == 'Organization'",
+   "fieldname": "organization_email",
+   "fieldtype": "Data",
+   "label": "Organization Email"
+  },
+  {
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nClosed\nUnder Review\nRejected\nPending"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-10 10:03:32.162360",
+ "modified": "2022-01-10 11:13:24.149283",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Information Form",

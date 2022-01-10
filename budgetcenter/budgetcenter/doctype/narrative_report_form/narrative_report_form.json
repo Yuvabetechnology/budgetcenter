@@ -30,15 +30,28 @@
   "html_19",
   "diff_between_similiar_services",
   "column_break_32",
+  "html_25",
+  "past_year_activities",
   "html_21",
   "service_impact",
-  "html_23",
-  "past_year_changes_in_service",
+  "achievements_in_the_past_year_section",
+  "past_year_accomplishments",
+  "meet_previous_year_achievements",
   "goals_and_objectives_for_the_coming_year_section",
   "goals_and_objectives",
-  "challenges",
   "human_resources_section",
   "human",
+  "need_human_resources",
+  "html_47",
+  "reason_human_resources",
+  "challenges_in_the_past_year_section",
+  "past_year_challenges",
+  "challenges_address",
+  "on_going_challenges",
+  "html_41",
+  "yes_for_plans",
+  "no_for_plans",
+  "what_would_this_require",
   "budget_related_explanations_section",
   "new_budget_explanations"
  ],
@@ -111,7 +124,7 @@
   },
   {
    "fieldname": "no_of_beneficiaries",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "How many members of the community benefited from the services you provided in the past year ?"
   },
   {
@@ -142,11 +155,6 @@
    "label": "What are your goals and objectives for the coming year?  "
   },
   {
-   "fieldname": "challenges",
-   "fieldtype": "Small Text",
-   "label": "What are the challenges you foresee?"
-  },
-  {
    "collapsible": 1,
    "fieldname": "human_resources_section",
    "fieldtype": "Section Break",
@@ -155,7 +163,7 @@
   {
    "fieldname": "human",
    "fieldtype": "Table",
-   "label": "How many people (Aurovilians, Employees, Volunteers) do you expect to serve in your service in the coming year ?",
+   "label": "How many Aurovilians/Newcomers/Volunteers/Workers were working in this service in the past year",
    "options": "SHR Table"
   },
   {
@@ -171,17 +179,13 @@
   },
   {
    "fieldname": "coming_year_beneficiaries",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "How many do you expect to serve in the coming year?"
   },
   {
    "fieldname": "html_17",
    "fieldtype": "HTML",
    "options": "<h5>Give a brief overview of your main intended activities</h5>"
-  },
-  {
-   "fieldname": "past_year_changes_in_service",
-   "fieldtype": "Small Text"
   },
   {
    "fieldname": "html_19",
@@ -200,11 +204,6 @@
   {
    "fieldname": "service_impact",
    "fieldtype": "Small Text"
-  },
-  {
-   "fieldname": "html_23",
-   "fieldtype": "HTML",
-   "options": "<h5>What impact did this have on the functioning of the service, and for the services you were able to provide to the community?</h5>"
   },
   {
    "fieldname": "column_break_32",
@@ -227,11 +226,94 @@
    "fieldtype": "HTML",
    "label": " Do you charge users for the service",
    "options": "<h5>\nDo you charge users for the service</h5>"
+  },
+  {
+   "fieldname": "html_25",
+   "fieldtype": "HTML",
+   "options": "<h5>What changes, if any, did you make in your service and its activities over the past year?\u00a0</h5>"
+  },
+  {
+   "fieldname": "past_year_activities",
+   "fieldtype": "Small Text"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "achievements_in_the_past_year_section",
+   "fieldtype": "Section Break",
+   "label": "ACHIEVEMENTS IN THE PAST YEAR"
+  },
+  {
+   "fieldname": "past_year_accomplishments",
+   "fieldtype": "Small Text",
+   "label": "Give a brief overview of the main accomplishments during the past year:\u00a0"
+  },
+  {
+   "fieldname": "meet_previous_year_achievements",
+   "fieldtype": "Small Text",
+   "label": "Did you meet your previous year\u2019s self-set goals and objectives?"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "challenges_in_the_past_year_section",
+   "fieldtype": "Section Break",
+   "label": "CHALLENGES IN THE PAST YEAR"
+  },
+  {
+   "fieldname": "past_year_challenges",
+   "fieldtype": "Small Text",
+   "label": "What challenges did the Service encounter in the past year?"
+  },
+  {
+   "fieldname": "challenges_address",
+   "fieldtype": "Small Text",
+   "label": "How did you address these?\u00a0"
+  },
+  {
+   "fieldname": "on_going_challenges",
+   "fieldtype": "Small Text",
+   "label": "Which challenges are on-going, and how do these impact your service?\u00a0"
+  },
+  {
+   "fieldname": "html_41",
+   "fieldtype": "HTML",
+   "options": "<h5>Do you have any plans for addressing these in the coming year</h5>"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_for_plans",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_for_plans",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "depends_on": "eval:doc.yes_for_plans == 1",
+   "fieldname": "what_would_this_require",
+   "fieldtype": "Small Text",
+   "label": "what would this require?"
+  },
+  {
+   "fieldname": "need_human_resources",
+   "fieldtype": "Small Text",
+   "label": "Do you feel this level of human resources is needed to sustain the level of activity of the service?"
+  },
+  {
+   "fieldname": "html_47",
+   "fieldtype": "HTML",
+   "options": "<h5>If you are asking for more support for human resources, please explain what additional work needs to be taken up in order to fulfil your aims, and why this cannot be taken up by your existing human resources:</h5>"
+  },
+  {
+   "fieldname": "reason_human_resources",
+   "fieldtype": "Small Text"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-07 15:11:33.567578",
+ "modified": "2022-01-10 11:32:56.051401",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Report Form",
