@@ -24,6 +24,9 @@
   "target_beneficiaries",
   "no_of_beneficiaries",
   "charge_users_for_service",
+  "yes_for_charge",
+  "no_for_charge",
+  "need_for_charge",
   "main_activities_section",
   "main_activities",
   "diff_between_services",
@@ -44,7 +47,7 @@
   },
   {
    "fieldname": "brief_overview",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Give a brief overview of what kind of service you intend provide to the community:"
   },
   {
@@ -55,7 +58,7 @@
   },
   {
    "fieldname": "target_beneficiaries",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Who are your target groups/intended beneficiaries?"
   },
   {
@@ -65,8 +68,8 @@
   },
   {
    "fieldname": "charge_users_for_service",
-   "fieldtype": "Small Text",
-   "label": "Do you intend to charge users for the service, if so, please explain the reason/need for this ? "
+   "fieldtype": "HTML",
+   "options": "<h5>Do you intend to charge users for the service ? </h5><h5></h5>"
   },
   {
    "collapsible": 1,
@@ -76,7 +79,7 @@
   },
   {
    "fieldname": "main_activities",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Give a brief overview of your main intended activities ?"
   },
   {
@@ -87,12 +90,12 @@
   },
   {
    "fieldname": "goals_and_objectives",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "What are your goals and objectives for the coming year?  "
   },
   {
    "fieldname": "challenges",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "What are the challenges you foresee?"
   },
   {
@@ -154,17 +157,17 @@
   },
   {
    "fieldname": "service_need",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Why do you feel this service is needed?"
   },
   {
    "fieldname": "diff_between",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Please explain what is the difference between your proposed service and similar existing ones?"
   },
   {
    "fieldname": "diff_between_services",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "How these are different from similar ones provided by other services in the community ?"
   },
   {
@@ -184,11 +187,29 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "\nOpen\nClosed\nUnder Review\nRejected\nPending"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_for_charge",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_for_charge",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "depends_on": "eval:doc.yes_for_charge == 1;",
+   "fieldname": "need_for_charge",
+   "fieldtype": "Text Editor",
+   "label": "Please explain the reason/need for this, and for what aspect of the service provided they would be charged"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-10 11:13:24.149283",
+ "modified": "2022-01-10 19:04:37.322110",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Information Form",
