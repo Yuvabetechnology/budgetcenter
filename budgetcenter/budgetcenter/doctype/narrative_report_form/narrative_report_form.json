@@ -20,6 +20,9 @@
   "target_beneficiaries",
   "no_of_beneficiaries",
   "coming_year_beneficiaries",
+  "do_you_charge_users_for_the_service",
+  "yes_checked",
+  "no_checked",
   "charge_users_for_service",
   "main_activities_section",
   "html_17",
@@ -112,9 +115,10 @@
    "label": "How many members of the community benefited from the services you provided in the past year ?"
   },
   {
+   "depends_on": "eval:doc.yes_checked == 1;",
    "fieldname": "charge_users_for_service",
    "fieldtype": "Small Text",
-   "label": "Do you intend to charge users for the service, if so, please explain the reason/need for this ? "
+   "label": " if so, please explain the reason/need for this ? "
   },
   {
    "collapsible": 1,
@@ -205,11 +209,29 @@
   {
    "fieldname": "column_break_32",
    "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_checked",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_checked",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "do_you_charge_users_for_the_service",
+   "fieldtype": "HTML",
+   "label": " Do you charge users for the service",
+   "options": "<h5>\nDo you charge users for the service</h5>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-06 16:22:39.434366",
+ "modified": "2022-01-07 15:11:33.567578",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Report Form",
