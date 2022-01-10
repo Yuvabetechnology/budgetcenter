@@ -51,9 +51,12 @@
   "html_41",
   "yes_for_plans",
   "no_for_plans",
+  "html_46",
   "what_would_this_require",
   "budget_related_explanations_section",
-  "new_budget_explanations"
+  "html_49",
+  "new_budget_explanations",
+  "data_51"
  ],
  "fields": [
   {
@@ -69,8 +72,9 @@
   },
   {
    "fieldname": "service_name",
-   "fieldtype": "Data",
-   "label": "Name of the Service:\u00a0"
+   "fieldtype": "Link",
+   "label": "Name of the Service:\u00a0",
+   "options": "Budget Applicant"
   },
   {
    "fieldname": "service_existence",
@@ -103,12 +107,12 @@
   },
   {
    "fieldname": "brief_overview",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Give a brief overview of what kind of service you (aspire to) provide to the community:\u00a0"
   },
   {
    "fieldname": "difference_between",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "If applicable, please explain what is the difference between your service and similar ones:"
   },
   {
@@ -119,7 +123,7 @@
   },
   {
    "fieldname": "target_beneficiaries",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Who are your target groups/intended beneficiaries?"
   },
   {
@@ -130,7 +134,7 @@
   {
    "depends_on": "eval:doc.yes_checked == 1;",
    "fieldname": "charge_users_for_service",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": " if so, please explain the reason/need for this ? "
   },
   {
@@ -151,7 +155,7 @@
   },
   {
    "fieldname": "goals_and_objectives",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "What are your goals and objectives for the coming year?  "
   },
   {
@@ -174,8 +178,7 @@
   },
   {
    "fieldname": "new_budget_explanations",
-   "fieldtype": "Long Text",
-   "label": "This is a space for to share anything important with reference to your budget request for this coming year (2022-2023)."
+   "fieldtype": "Text Editor"
   },
   {
    "fieldname": "coming_year_beneficiaries",
@@ -194,7 +197,7 @@
   },
   {
    "fieldname": "diff_between_similiar_services",
-   "fieldtype": "Small Text"
+   "fieldtype": "Text Editor"
   },
   {
    "fieldname": "html_21",
@@ -203,7 +206,7 @@
   },
   {
    "fieldname": "service_impact",
-   "fieldtype": "Small Text"
+   "fieldtype": "Text Editor"
   },
   {
    "fieldname": "column_break_32",
@@ -234,7 +237,7 @@
   },
   {
    "fieldname": "past_year_activities",
-   "fieldtype": "Small Text"
+   "fieldtype": "Text Editor"
   },
   {
    "collapsible": 1,
@@ -244,12 +247,12 @@
   },
   {
    "fieldname": "past_year_accomplishments",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Give a brief overview of the main accomplishments during the past year:\u00a0"
   },
   {
    "fieldname": "meet_previous_year_achievements",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Did you meet your previous year\u2019s self-set goals and objectives?"
   },
   {
@@ -260,17 +263,17 @@
   },
   {
    "fieldname": "past_year_challenges",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "What challenges did the Service encounter in the past year?"
   },
   {
    "fieldname": "challenges_address",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "How did you address these?\u00a0"
   },
   {
    "fieldname": "on_going_challenges",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Which challenges are on-going, and how do these impact your service?\u00a0"
   },
   {
@@ -293,12 +296,11 @@
   {
    "depends_on": "eval:doc.yes_for_plans == 1",
    "fieldname": "what_would_this_require",
-   "fieldtype": "Small Text",
-   "label": "what would this require?"
+   "fieldtype": "Text Editor"
   },
   {
    "fieldname": "need_human_resources",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Do you feel this level of human resources is needed to sustain the level of activity of the service?"
   },
   {
@@ -308,12 +310,27 @@
   },
   {
    "fieldname": "reason_human_resources",
-   "fieldtype": "Small Text"
+   "fieldtype": "Text Editor"
+  },
+  {
+   "fieldname": "html_49",
+   "fieldtype": "HTML",
+   "options": "<h5>This is a space for to share anything important with reference to your budget request for this coming year (2022-2023)</h5><h5></h5>"
+  },
+  {
+   "depends_on": "eval:doc.yes_for_plans == 1",
+   "fieldname": "html_46",
+   "fieldtype": "HTML",
+   "options": "<h5>what would this require ?</h5>"
+  },
+  {
+   "fieldname": "data_51",
+   "fieldtype": "Data"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-10 11:32:56.051401",
+ "modified": "2022-01-10 18:44:38.682048",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Report Form",
