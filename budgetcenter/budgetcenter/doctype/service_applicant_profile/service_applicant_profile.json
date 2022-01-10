@@ -1,34 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:item_name",
- "creation": "2022-01-10 11:57:00.250167",
+ "creation": "2022-01-10 15:00:06.302263",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "item_name",
-  "account_code"
+  "service_name"
  ],
  "fields": [
   {
-   "fieldname": "item_name",
+   "fieldname": "service_name",
    "fieldtype": "Data",
-   "label": "Item",
-   "unique": 1
-  },
-  {
-   "fieldname": "account_code",
-   "fieldtype": "Int",
-   "label": "Account code "
+   "label": "Service Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-10 11:57:00.250167",
+ "modified": "2022-01-10 15:00:06.302263",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
- "name": "Recurring Expenses Item",
+ "name": "Service Applicant Profile",
  "owner": "Administrator",
  "permissions": [
   {

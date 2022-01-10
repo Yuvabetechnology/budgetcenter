@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestRecurringExpensesItem(unittest.TestCase):
+class TestServiceApplicantProfile(unittest.TestCase):
 	pass

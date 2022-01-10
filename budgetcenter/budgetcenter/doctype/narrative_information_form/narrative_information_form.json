@@ -9,19 +9,27 @@
  "field_order": [
   "city_services_narrative_information_form",
   "html_2",
+  "applicant_type",
   "service_name",
+  "application_status",
   "service_website",
+  "organization_email",
   "contact_persons_section",
   "contact_persons_table",
   "purpose_section",
   "brief_overview",
-  "difference_between",
+  "service_need",
+  "diff_between",
   "beneficiaries",
   "target_beneficiaries",
   "no_of_beneficiaries",
   "charge_users_for_service",
+  "yes_for_charge",
+  "no_for_charge",
+  "need_for_charge",
   "main_activities_section",
   "main_activities",
+  "diff_between_services",
   "goals_and_objectives_for_the_coming_year_section",
   "goals_and_objectives",
   "challenges",
@@ -39,13 +47,8 @@
   },
   {
    "fieldname": "brief_overview",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Give a brief overview of what kind of service you intend provide to the community:"
-  },
-  {
-   "fieldname": "difference_between",
-   "fieldtype": "Small Text",
-   "label": "Why do you feel this service is needed? If applicable, please explain what is the difference between your proposed service and similar exist"
   },
   {
    "collapsible": 1,
@@ -55,18 +58,18 @@
   },
   {
    "fieldname": "target_beneficiaries",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Who are your target groups/intended beneficiaries?"
   },
   {
    "fieldname": "no_of_beneficiaries",
-   "fieldtype": "Small Text",
+   "fieldtype": "Int",
    "label": "How many members of the community do you expect to use and benefit from the services you will provide (per year)?"
   },
   {
    "fieldname": "charge_users_for_service",
-   "fieldtype": "Small Text",
-   "label": "Do you intend to charge users for the service, if so, please explain the reason/need for this ? "
+   "fieldtype": "HTML",
+   "options": "<h5>Do you intend to charge users for the service ? </h5><h5></h5>"
   },
   {
    "collapsible": 1,
@@ -76,8 +79,8 @@
   },
   {
    "fieldname": "main_activities",
-   "fieldtype": "Small Text",
-   "label": "Give a brief overview of your main intended activities (and if applicable, how these are different from similar ones provided by other servi"
+   "fieldtype": "Text Editor",
+   "label": "Give a brief overview of your main intended activities ?"
   },
   {
    "collapsible": 1,
@@ -87,12 +90,12 @@
   },
   {
    "fieldname": "goals_and_objectives",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "What are your goals and objectives for the coming year?  "
   },
   {
    "fieldname": "challenges",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "What are the challenges you foresee?"
   },
   {
@@ -151,11 +154,62 @@
    "fieldname": "contact_persons_section",
    "fieldtype": "Section Break",
    "label": "Contact Persons"
+  },
+  {
+   "fieldname": "service_need",
+   "fieldtype": "Text Editor",
+   "label": "Why do you feel this service is needed?"
+  },
+  {
+   "fieldname": "diff_between",
+   "fieldtype": "Text Editor",
+   "label": "Please explain what is the difference between your proposed service and similar existing ones?"
+  },
+  {
+   "fieldname": "diff_between_services",
+   "fieldtype": "Text Editor",
+   "label": "How these are different from similar ones provided by other services in the community ?"
+  },
+  {
+   "fieldname": "applicant_type",
+   "fieldtype": "Select",
+   "label": "Applicant Type",
+   "options": "\nOrganization\nIndividual"
+  },
+  {
+   "depends_on": "eval:doc.applicant_type == 'Organization'",
+   "fieldname": "organization_email",
+   "fieldtype": "Data",
+   "label": "Organization Email"
+  },
+  {
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nClosed\nUnder Review\nRejected\nPending"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_for_charge",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_for_charge",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "depends_on": "eval:doc.yes_for_charge == 1;",
+   "fieldname": "need_for_charge",
+   "fieldtype": "Text Editor",
+   "label": "Please explain the reason/need for this, and for what aspect of the service provided they would be charged"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-06 12:09:07.462324",
+ "modified": "2022-01-10 19:04:37.322110",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Information Form",
