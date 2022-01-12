@@ -7,10 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "city_services_narrative_information_form",
-  "html_2",
-  "applicant_type",
   "service_name",
+  "service_type",
+  "service_sector",
   "application_status",
   "service_website",
   "organization_email",
@@ -19,6 +18,8 @@
   "purpose_section",
   "brief_overview",
   "service_need",
+  "similar_service_yes",
+  "similar_service_no",
   "diff_between",
   "beneficiaries",
   "target_beneficiaries",
@@ -36,7 +37,8 @@
   "human_resources_section",
   "human",
   "budget_related_explanations_section",
-  "new_budget_explanations"
+  "new_budget_explanations",
+  "expected_community_member_benefit"
  ],
  "fields": [
   {
@@ -139,17 +141,6 @@
    "label": "Name of the Service:\u00a0"
   },
   {
-   "fieldname": "city_services_narrative_information_form",
-   "fieldtype": "HTML",
-   "label": "City Services Narrative Information Form ",
-   "options": "<h2 align=\"center\">City Services Narrative Information Form </h2>"
-  },
-  {
-   "fieldname": "html_2",
-   "fieldtype": "HTML",
-   "options": "<h3 align=\"center\">If you are a new service, please complete this narrative information form to accompany your City Services Budget Request Form (2022-2023)</h3><h3></h3>"
-  },
-  {
    "collapsible": 1,
    "fieldname": "contact_persons_section",
    "fieldtype": "Section Break",
@@ -169,12 +160,6 @@
    "fieldname": "diff_between_services",
    "fieldtype": "Text Editor",
    "label": "How these are different from similar ones provided by other services in the community ?"
-  },
-  {
-   "fieldname": "applicant_type",
-   "fieldtype": "Select",
-   "label": "Applicant Type",
-   "options": "\nOrganization\nIndividual"
   },
   {
    "depends_on": "eval:doc.applicant_type == 'Organization'",
@@ -205,11 +190,41 @@
    "fieldname": "need_for_charge",
    "fieldtype": "Text Editor",
    "label": "Please explain the reason/need for this, and for what aspect of the service provided they would be charged"
+  },
+  {
+   "fieldname": "service_sector",
+   "fieldtype": "Select",
+   "label": "Select Service Sector",
+   "options": "Education\nSocial Support\nMunicipal Services\nHealth\nForest\nOrganization\nArts Culture And Sports\nFarms\nOutreach\nLand\nMatrimandir\nHousing"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "\nOrganization\nIndividual"
+  },
+  {
+   "default": "0",
+   "fieldname": "similar_service_yes",
+   "fieldtype": "Check",
+   "label": "Similar Service Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "similar_service_no",
+   "fieldtype": "Check",
+   "label": "Similar Service No"
+  },
+  {
+   "fieldname": "expected_community_member_benefit",
+   "fieldtype": "Select",
+   "label": "Expected Community Member Benefit",
+   "options": "10 - 50\n50-100\n100-200\n200-350"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-10 19:04:37.322110",
+ "modified": "2022-01-12 13:13:18.379650",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Information Form",
@@ -226,9 +241,22 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "track_changes": 1
+ "track_changes": 1,
+ "track_seen": 1
 }
