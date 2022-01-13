@@ -38,7 +38,9 @@
   "human",
   "budget_related_explanations_section",
   "new_budget_explanations",
-  "expected_community_member_benefit"
+  "expected_community_member_benefit",
+  "yes_for_special_note",
+  "no_for_special_note"
  ],
  "fields": [
   {
@@ -110,7 +112,7 @@
    "fieldname": "human",
    "fieldtype": "Table",
    "label": "How many people (Aurovilians, Employees, Volunteers) do you expect to serve in your service in the coming year ?",
-   "options": "SHR Table"
+   "options": "Information Human Resource Table"
   },
   {
    "collapsible": 1,
@@ -120,7 +122,7 @@
   },
   {
    "fieldname": "new_budget_explanations",
-   "fieldtype": "Long Text",
+   "fieldtype": "Text Editor",
    "label": "This is a space for to share anything important with reference to your budget request for this coming year (2022-2023)."
   },
   {
@@ -220,11 +222,23 @@
    "fieldtype": "Select",
    "label": "Expected Community Member Benefit",
    "options": "10 - 50\n50-100\n100-200\n200-350"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_for_special_note",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_for_special_note",
+   "fieldtype": "Check",
+   "label": "No"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-12 13:13:18.379650",
+ "modified": "2022-01-13 13:38:58.407275",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Information Form",

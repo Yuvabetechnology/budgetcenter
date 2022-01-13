@@ -14,29 +14,41 @@
  ],
  "fields": [
   {
+   "bold": 1,
    "fieldname": "role",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Role"
   },
   {
    "fieldname": "responsibilities",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Responsibilities"
   },
   {
    "fieldname": "working_hours",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Working Hours (per week)"
   },
   {
    "fieldname": "av_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Status (AV/Employee)",
    "options": "\nAV\nNC"
   },
   {
+   "bold": 1,
    "fieldname": "supported_by",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Supported by ",
    "options": "\nCS\nOther Service Income\nVolunteering"
   }
@@ -44,10 +56,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-01-06 10:31:06.551035",
+ "modified": "2022-01-13 13:30:28.843385",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
- "name": "SHR Table",
+ "name": "Information Human Resource Table",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
