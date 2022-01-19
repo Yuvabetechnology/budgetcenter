@@ -217,7 +217,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-01-04 10:34:15.402370",
+ "modified": "2022-01-19 12:05:45.200249",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Budget Request",
@@ -245,6 +245,19 @@
    "read": 1,
    "report": 1,
    "role": "Budget Applicant",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
    "select": 1,
    "share": 1,
    "write": 1
