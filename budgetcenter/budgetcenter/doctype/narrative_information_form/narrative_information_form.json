@@ -47,12 +47,15 @@
    "collapsible": 1,
    "fieldname": "purpose_section",
    "fieldtype": "Section Break",
+   "in_preview": 1,
    "label": "PURPOSE "
   },
   {
    "fieldname": "brief_overview",
    "fieldtype": "Text Editor",
-   "label": "Give a brief overview of what kind of service you intend provide to the community:"
+   "in_preview": 1,
+   "label": "Give a brief overview of what kind of service you intend provide to the community:",
+   "translatable": 1
   },
   {
    "collapsible": 1,
@@ -68,6 +71,7 @@
   {
    "fieldname": "no_of_beneficiaries",
    "fieldtype": "Int",
+   "in_preview": 1,
    "label": "How many members of the community do you expect to use and benefit from the services you will provide (per year)?"
   },
   {
@@ -140,12 +144,12 @@
   {
    "fieldname": "service_name",
    "fieldtype": "Data",
+   "in_preview": 1,
    "label": "Name of the Service:\u00a0"
   },
   {
-   "collapsible": 1,
    "fieldname": "contact_persons_section",
-   "fieldtype": "Section Break",
+   "fieldtype": "HTML",
    "label": "Contact Persons"
   },
   {
@@ -238,7 +242,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-13 13:38:58.407275",
+ "modified": "2022-01-19 09:25:22.375399",
  "modified_by": "Administrator",
  "module": "Budgetcenter",
  "name": "Narrative Information Form",
